@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO TABELA</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 600px;
+            height: 15px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: wheat;
+        }
+
+        tbody > tr:nth-child(2n) {/* efeito zebrado */
+            background-color: lightgray;
+        }
+        table {
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.379);
+            border: 2px solid black;
+            position: relative;
+        }
+        tbody > tr:nth-child(2n-1) {/* efeito zebrado */
+            background-color: white;
+        }
+
+        thead > tr > th {/* menu fixo */
+            position: sticky;
+            top: -1px;
+        }
+
+        .M {font-size: 1.3em;
+            color: white;
+            background-color: red;
+        }
+        .H {font-size: 1.3em;
+            color: white;
+            background-color: blue;
+        }
+        .nome {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+     <!-- 
+        ANATOMIA DE TABELAS GRANDES
+        TABLE
+            CAPTION = nome da tabela
+            THEAD = titulo
+                TR = linha
+                    TD = dados semantico
+                    TH = tipo de dados
+            TBODY = conteudo
+                TR, TD, TH
+            TFOOT = rodape
+                TR, TD, TH
+                
+     -->
+     <!-- colspan="2" cedula ocupar 2 colunas -->
+     <!-- rowspan="3" cedula ocupar 3 linhas -->
+     <!-- scope="col" = th para baixo -->
+     <!-- scope="row" = th para lateral -->
+      <!-- scope="colgroup" = th para baixo grupo -->
+     <!-- scope="rowgroup" = th para lateral grupo -->
+     <table>
+        <tfoot><th scope="row" colspan="4">TOTAL DE FILMES <td style="text-align: center;">18</tfoot>
+        <caption>DESAFIO 13 - CRIAÇÃO DE TABELA</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupo
+                <th scope="col">Nomes
+                <th scope="colgroup" colspan="3">Filmes
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="3" class="M">Mulheres
+
+                    <td class="nome">Ana Maria Santos
+                        <td>Alien
+                        <td>Rambo
+                        <td>Vingadores
+            <tr>    
+                    <td class="nome">Beatriz Souza
+                        <td>Hulk
+                        <td>Inception
+                        <td>Batman
+            <tr>    
+                    <td class="nome">Cláudia Melo
+                        <td>Oblivion
+                        <td>Matrix
+                        <td>Big Hero
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="3" class="H">Homens
+
+                    <td class="nome">Bruno Mendonça
+                        <td>Intocáveis
+                        <td>Amnésia
+                        <td>Gladiador
+            <tr>    
+                    <td class="nome">Daniel Lourenço
+                        <td>Wall-E
+                        <td>Oldboy
+                        <td>Dangal
+            <tr>    
+                    <td class="nome">Fabiano Mota
+                        <td>Star Wars 5
+                        <td>Taxi Driver
+                        <td>Toy Stoy
+            </tr>
+        </tbody>
+     </table>
+</body>
+</html>

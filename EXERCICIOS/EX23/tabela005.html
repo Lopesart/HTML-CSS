@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de tabelas</title>
+    <STyle>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border: 1px solid black;
+            
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        col.nome {
+            background-color: aqua;
+        }
+        col.grupo {
+            background-color: rgb(78, 148, 16);
+        }
+        tr.linhadestaque{
+            background-color: blueviolet;
+        }
+        div#container {
+            overflow-x: auto;
+            /* 
+            overflow: ; = configurar rolagens
+            overflow-y: ; = configurar rolagen vestical 
+            overflow-x: ; = configurar rolagem horizontal */
+        }
+    </STyle>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex ut sapiente consectetur minus deleniti, temporibus quidem? Vitae cumque a optio, quas nesciunt laborum mollitia consectetur, explicabo aliquid natus quibusdam.</p>
+    <div id="container">
+        <table>
+            <colgroup><!-- para configurar colubas -->
+                <col class="nome">
+                <col class="grupo" span="2"> <!-- para configurar 2 colunas juntas -->
+        
+                <col class="prof">
+            </colgroup>
+            <caption>Cadastro</caption>
+            <tr>
+                <th scope="col">nome</th>
+                <th scope="col">sexo</th>
+                <th scope="col">idade</th>
+                <th scope="col">profissão</th>
+                <th>jan</th>
+                <th>fev
+                    <th>mar</th>
+                    <th>abr</th>
+                    <th>mai</th>
+                    <th>jun</th>
+                    <th>jul</th>
+                    <th>ago</th>
+                    <th>set</th>
+                    <th>out</th>
+                    <th>nov</th>
+                    <th>dez</th>
+            </tr>
+            <tr>
+                <td>Ana Maria</td>
+                <td>FF</td>
+                <td>25</td>
+                <td>Jornalista </td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+        
+            </tr>
+            <tr class="linhadestaque">
+                <td>Ana Maria</td>
+                <td>FF</td>
+                <td>25</td>
+                <td>Jornalista </td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+            </tr>
+            <tr>
+                <td>Ana Maria</td>
+                <td>FF</td>
+                <td>25</td>
+                <td>Jornalista </td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>FF</td>
+                    <td>25</td>
+                    <td>Jornalista </td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <tr>
+                        <td>Ana Maria</td>
+                        <td>FF</td>
+                        <td>25</td>
+                        <td>Jornalista </td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <tr>
+                            <td>Ana Maria</td>
+                            <td>FF</td>
+                            <td>25</td>
+                            <td>Jornalista </td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <tr>
+                                <td>Ana Maria</td>
+                                <td>FF</td>
+                                <td>25</td>
+                                <td>Jornalista </td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>00</td>
+                                <tr>
+                                    <td>Ana Maria</td>
+                                    <td>FF</td>
+                                    <td>25</td>
+                                    <td>Jornalista </td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+                                    <td>00</td>
+        </table>
+    </div>
+</body>
+</html>

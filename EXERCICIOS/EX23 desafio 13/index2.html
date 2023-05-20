@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO TABELA</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 500px;
+            height: 15px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: wheat;
+        }
+
+        tbody > tr:nth-child(2n) {/* efeito zebrado */
+           /*background-color: lightgray;*/
+        }
+
+        tbody > tr:nth-child(2n-1) {/* efeito zebrado */
+            /*background-color: white;*/
+        }
+
+        table {
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.379);
+            border: 2px solid black;
+            position: relative;
+        }
+        
+        thead > tr > th {/* menu fixo */
+            /*position: sticky;
+            top: -1px;*/
+        }
+
+        .E {font-size: 1.3em;
+            color: white;
+            background-color: red;
+        }
+        .H {font-size: 1.3em;
+            color: white;
+            background-color: blue;
+        }
+        .media {
+            text-align: left;
+        }
+        .nome {
+            font-weight: bold;
+        }
+        .nota {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <!-- 
+        ANATOMIA DE TABELAS GRANDES
+        TABLE
+            CAPTION = nome da tabela
+            THEAD = titulo
+                TR = linha
+                    TD = dados semantico
+                    TH = tipo de dados
+            TBODY = conteudo
+                TR, TD, TH
+            TFOOT = rodape
+                TR, TD, TH
+                
+     -->
+     <!-- colspan="2" cedula ocupar 2 colunas -->
+     <!-- rowspan="3" cedula ocupar 3 linhas -->
+     <!-- scope="col" = th para baixo -->
+     <!-- scope="row" = th para lateral -->
+      <!-- scope="colgroup" = th para baixo grupo -->
+     <!-- scope="rowgroup" = th para lateral grupo -->
+     <table>
+        <caption>DESAFIO 13 - CRIAÇÃO DE TABELA</caption>
+        <tfoot></tfoot>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">Área
+                <th scope="col" rowspan="2">Disciplina
+                <th scope="colgroup" colspan="2">Notas
+                <th scope="col" rowspan="2">Média
+            </tr>
+            <tr>
+                <th scope="col">Nota 1
+                <th scope="col">Nota 2
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="4" class="E">Exatas
+
+                    <td class="nome">Mátematica
+                        <td class="nota">0.0
+                        <td class="nota">0.0
+                         <td class="nota">0.0
+            <tr>    
+                <td class="nome">Física
+                    <td class="nota">0.0
+                    <td class="nota">0.0
+                     <td class="nota">0.0
+            <tr>    
+                <td class="nome">Quimica
+                    <td class="nota">0.0
+                    <td class="nota">0.0
+                     <td class="nota">0.0
+            <tr>    
+                <td class="nome">Biologia
+                    <td class="nota">0.0
+                    <td class="nota">0.0
+                     <td class="nota">0.0
+            <tr> 
+                <th scope="row" colspan="4" class="media">Media de Exatas
+                    <th scope="col" class="nota">0.0
+            </tr>
+
+            <tr>
+                <th scope="rowgroup" rowspan="2" class="H">Humanas
+
+                    <td class="nome">História
+                        <td class="nota">0.0
+                        <td class="nota">0.0
+                         <td class="nota">0.0
+            <tr>    
+                <td class="nome">Geografia
+                    <td class="nota">0.0
+                    <td class="nota">0.0
+                     <td class="nota">0.0
+            <tr> 
+                <th scope="row" colspan="4" class="media">Media de Humanas
+                     <th scope="col" class="nota">0.0
+            </tr>
+        </tbody>
+     </table>
+</body>
+</html>
